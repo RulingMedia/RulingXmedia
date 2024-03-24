@@ -73,12 +73,14 @@ img {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     gap: 20px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    padding: 20px;
+    width: 100%; /* Adjusted width for laptops */
+    overflow-y: auto; /* Added overflow-y for mobile screens */
+    height: 100vh; /* Added height for mobile screens */
 }
+
 
 .box {
     width: 200px;
