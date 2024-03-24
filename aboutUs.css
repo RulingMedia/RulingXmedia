@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end; /* Changed from space-between to flex-end */
+    align-items: center;
+    height: 100px;
+    padding: 0 5%;
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+}
+
+header h1 {
+    font-size: 40px;
+    color: white;
+}
+
+header nav {
+    display: flex;
+    gap: 30px;
+}
+
+header nav a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 99px;
+    transition: 0.3s;
+    color: white;
+}
+
+header nav a.active {
+    background: #e40707;
+}
+
+header nav a:hover {
+    background: #e10a0a;
+}
+
+header nav:hover > a:not(:hover) {
+    background: none;
+}
+
+.home {
+    display: flex;
+    height: 100vh; /* Corrected typo from 100dvh to 100vh */
+    background: linear-gradient(to top, #D2E2FB 30%, #86A8DB);
+    position: relative;
+    overflow: hidden;
+}
+
+img {
+    width: 95px;
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    font-size: 18px;
+    opacity: 2;
+    border-radius: 50%;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 99px;
+    transition: background 0.3s;
+    color: white;
+}
+
+nav a.active,
+nav a:hover {
+    background: #e60606;
+}
+
+section.about {
+    padding: 50px 5%;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto; /* Center the container horizontally */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info h2 {
+    color: #e69f9f;
+    margin-bottom: 20px;
+}
+
+.social a {
+    color: #eca7a7;
+    font-size: 44px;
+    margin-right: 20px;
+}
+
+.social a:hover {
+    color: #e60e0e;
+}
+
+.info p {
+    font-size: 20px; /* Adjust the font size as needed */
+}
+
+.info h2 {
+    font-size: 40px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 320px) {
+    /* Adjustments for smaller screens */
+    header {
+        padding: 0 3%;
+    }
+    header h1 {
+        font-size: 30px;
+    }
+    header nav {
+        gap: 15px;
+    }
+    header nav a {
+        font-size: 16px;
+        padding: 6px 12px;
+    }
+    .home .title {
+        font-size: 60px;
+    }
+    section.about {
+        padding: 30px 5%;
+    }
+    .info h2 {
+        font-size: 30px;
+    }
+    .social a {
+        font-size: 30px;
+        margin-right: 10px;
+    }
+    .info p {
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 321px) and (max-width: 425px) {
+    /* Adjustments for small to medium-sized screens */
+    header {
+        padding: 0 4%;
+    }
+    header h1 {
+        font-size: 32px;
+    }
+    header nav {
+        gap: 20px;
+    }
+    header nav a {
+        font-size: 18px;
+        padding: 8px 14px;
+    }
+    .home .title {
+        font-size: 64px;
+    }
+    section.about {
+        padding: 40px 5%;
+    }
+    .info h2 {
+        font-size: 32px;
+    }
+    .social a {
+        font-size: 36px;
+        margin-right: 15px;
+    }
+    .info p {
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 426px) and (max-width: 770px) {
+    /* Adjustments for medium to large-sized screens */
+    header {
+        padding: 0 6%;
+    }
+    header h1 {
+        font-size: 34px;
+    }
+    header nav {
+        gap: 25px;
+    }
+    header nav a {
+        font-size: 18px;
+        padding: 10px 16px;
+    }
+    .home .title {
+        font-size: 68px;
+    }
+    section.about {
+        padding: 45px 5%;
+    }
+    .info h2 {
+        font-size: 34px;
+    }
+    .social a {
+        font-size: 40px;
+        margin-right: 18px;
+    }
+    .info p {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 771px) and (max-width: 1025px) {
+    /* Adjustments for large-sized screens */
+    header {
+        padding: 0 8%;
+    }
+    header h1 {
+        font-size: 36px;
+    }
+    header nav {
+        gap: 30px;
+    }
+    header nav a {
+        font-size: 20px;
+        padding: 12px 18px;
+    }
+    .home .title {
+        font-size: 72px;
+    }
+    section.about {
+        padding: 50px 5%;
+    }
+    .info h2 {
+        font-size: 36px;
+    }
+    .social a {
+        font-size: 44px;
+        margin-right: 20px;
+    }
+    .info p {
+        font-size: 22px;
+    }
+}
